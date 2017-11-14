@@ -8,9 +8,12 @@ ENV ROCKETCHAT_PASSWORD zaq12wsx
 ENV ROCKETCHAT_ROOM
 ENV LISTEN_ON_ALL_PUBLIC true
 
+ENV EXTERNAL_SCRIPTS hubot-gitsy,hubot-pugme,hubot-devops-reactions,hubot-thank-you,hubot-tell,hubot-mute，hubot-calculator
+
+
+#for hubot-gitsy
 ENV GITLAB_URL http://devops-gitlab
 ENV GITLAB_API_KEY aKXqWd3sy4mP6NdsTMAs
 
-ENV EXTERNAL_SCRIPTS hubot-gitsy
-   
+
 VOLUME /home/hubot/scripts
