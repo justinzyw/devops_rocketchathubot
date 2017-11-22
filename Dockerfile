@@ -8,12 +8,21 @@ ENV ROCKETCHAT_PASSWORD zaq12wsx
 ENV ROCKETCHAT_ROOM
 ENV LISTEN_ON_ALL_PUBLIC true
 
-ENV EXTERNAL_SCRIPTS hubot-gitsy,hubot-pugme,hubot-devops-reactions,hubot-thank-you,hubot-tell,hubot-mute，hubot-calculator
-
+ENV EXTERNAL_SCRIPTS hubot-pugme,hubot-slothme,hubot-thank-you,hubot-tell,hubot-help,hubot-calculator,hubot-robotstuff,hubot-devops-reactions,hubot-rocketchat-welcome,hubot-rocketchat-announcement,hubot-rocketchat-default-response,hubot-gitsy,hubot-jenkins-enhanced,hubot-docker,hubot-grafana,hubot-sonarqube
 
 #for hubot-gitsy
-ENV GITLAB_URL http://devops-gitlab
+ENV GITLAB_URL http://devops-gitlab:80
 ENV GITLAB_API_KEY aKXqWd3sy4mP6NdsTMAs
 
+#for hubot-help
+ENV HUBOT_HELP_REPLY_IN_PRIVATE 1
+
+#for hubot-jenkins-enhanced
+ENV HUBOT_JENKINS_URL http://devops-jenkins:8080
+ENV HUBOT_JENKINS_AUTH devopsadmin:zaq12wsx
+
+#for hubot-grafana
+ENV HUBOT_GRAFANA_HOST http://devops-grafana:3000
+ENV HUBOT_GRAFANA_API_KEY eyJrIjoiUUpsWnNpM1hCV0cyNFB4N0VxNXFMczZJa202Tk5EUG0iLCJuIjoiaHVib3QiLCJpZCI6MX0=
 
 VOLUME /home/hubot/scripts
