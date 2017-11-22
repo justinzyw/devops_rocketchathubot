@@ -5,7 +5,7 @@ ENV BOT_NAME hubot
 ENV ROCKETCHAT_AUTH password
 ENV ROCKETCHAT_USER devopsadmin
 ENV ROCKETCHAT_PASSWORD zaq12wsx
-ENV ROCKETCHAT_ROOM
+ENV ROCKETCHAT_ROOM ''
 ENV LISTEN_ON_ALL_PUBLIC true
 
 ENV EXTERNAL_SCRIPTS hubot-pugme,hubot-slothme,hubot-thank-you,hubot-tell,hubot-help,hubot-calculator,hubot-robotstuff,hubot-devops-reactions,hubot-rocketchat-welcome,hubot-rocketchat-announcement,hubot-rocketchat-default-response,hubot-gitsy,hubot-jenkins-enhanced,hubot-docker,hubot-grafana,hubot-sonarqube
