@@ -29,10 +29,9 @@ ENV HUBOT_GRAFANA_HOST http://devops-grafana:3000
 ENV HUBOT_GRAFANA_API_KEY eyJrIjoiUUpsWnNpM1hCV0cyNFB4N0VxNXFMczZJa202Tk5EUG0iLCJuIjoiaHVib3QiLCJpZCI6MX0=
 
 #for hubot-docker
-COPY ["fix4docker.sh", "/home/hubot"]
 USER root
+COPY ["fix4docker.sh", "/home/hubot"]
 RUN chmod 755 fix4docker.sh
-USER hubot
 CMD /bin/bash -c /home/hubot/fix4docker.sh && \ 
   node -e "console.log(JSON.stringify('$EXTERNAL_SCRIPTS'.split(',')))" > external-scripts.json && \
   npm install $(node -e "console.log('$EXTERNAL_SCRIPTS'.split(',').join(' '))") && \
