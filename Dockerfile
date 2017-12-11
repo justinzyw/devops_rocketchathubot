@@ -7,6 +7,7 @@ ENV ROCKETCHAT_USER devopsadmin
 ENV ROCKETCHAT_PASSWORD zaq12wsx
 ENV ROCKETCHAT_ROOM ''
 ENV LISTEN_ON_ALL_PUBLIC true
+ENV RESPOND_TO_DM true
 
 VOLUME /home/hubot/scripts
 
@@ -29,7 +30,7 @@ ENV HUBOT_GRAFANA_API_KEY eyJrIjoiUUpsWnNpM1hCV0cyNFB4N0VxNXFMczZJa202Tk5EUG0iLC
 
 #for hubot-docker
 USER root
-COPY ["fix4docker.sh", "/"]
+COPY ["fix4docker.sh", "/home/hubot"]
 RUN chmod 755 /fix4docker.sh
 USER hubot
 CMD /bin/bash -c fix4docker.sh \ 
