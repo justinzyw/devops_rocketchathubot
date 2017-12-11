@@ -32,8 +32,8 @@ USER root
 COPY ["fix4docker.sh", "/"]
 RUN chmod 755 /fix4docker.sh
 USER hubot
-CMD fix4docker.sh \ 
+CMD /bin/bash -c fix4docker.sh \ 
   node -e "console.log(JSON.stringify('$EXTERNAL_SCRIPTS'.split(',')))" > external-scripts.json && \
-	npm install $(node -e "console.log('$EXTERNAL_SCRIPTS'.split(',').join(' '))") && \
+  npm install $(node -e "console.log('$EXTERNAL_SCRIPTS'.split(',').join(' '))") && \
   bin/hubot -n $BOT_NAME -a rocketchat
 
